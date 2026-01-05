@@ -8,7 +8,7 @@ function App() {
     <>
       <h2>{greeting()}</h2>
       <Comp1 
-      name="abre"
+      name="ABRE"
       age={23}
       role="software_engineer"
       greeting={greeting}
@@ -20,10 +20,11 @@ function App() {
 
 function Comp1(props) {
   const lower = 'text-lowercase';
-  const r = 'abre';
+  const r = 'ABRE';
+  const name = 'ABEL';
   return (
     <div>
-      <h1 className={lower}>the nameof the person is called {props.name} or {r}</h1>
+      <h1 className={lower}>THE NAME OF THE PERSON IS CALLED {props.name} OR {r}</h1>
       <p>Age: {props.age}</p>
       <p>Role: {props.role}</p>
       <p>Greeting from function prop: {props.greeting()}</p>
