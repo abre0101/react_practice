@@ -1,9 +1,18 @@
 import './App.css'
 
 function App() {
+    function greeting(){
+        return 'hello'
+    }
   return (
     <>
-      <Comp1 name='abre' />
+      <h2>{greeting()}</h2>
+      <Comp1 
+      name="abre"
+      age={23}
+      role="software_engineer"
+      greeting={greeting}
+      />
       <Comp2 />
     </>
   )
@@ -12,8 +21,14 @@ function App() {
 function Comp1(props) {
   const lower = 'text-lowercase';
   const r = 'abre';
-  const ab = <h1 className={lower}>the nameof the person is called {props.name} or {r}</h1>;
-  return ab;
+  return (
+    <div>
+      <h1 className={lower}>the nameof the person is called {props.name} or {r}</h1>
+      <p>Age: {props.age}</p>
+      <p>Role: {props.role}</p>
+      <p>Greeting from function prop: {props.greeting()}</p>
+    </div>
+  );
 }
 
 function Comp2() {
